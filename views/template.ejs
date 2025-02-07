@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript">
+<link rel="stylesheet" href="/weekly.css" type="text/css">
+<title>番組表</title>
+<script language="JavaScript">
+function Menu() {
+  if (document.all) {
+    document.all("menu").style.pixelTop = document.body.scrollTop;
+  } else {
+    document.getElementById("menu").style.top = pageYOffset + "px";
+  }
+}
+onscroll = Menu;
+</script>
+</head>
+<body>
+<div align="center">
+  <div id="menu" style="position:absolute; top:0px; left:0px; z-index:1; width:100%;">
+    <table border="0" cellpadding="5" cellspacing="1" width="911px" bgcolor="#6699cc">
+      <tr>
+        <td width="18px" rowspan="1" colspan="1" class="w_Hour_head" valign="top">時</td>
+        <% for (let i = 0; i < 7; i++) { %>
+          <td width="108px" rowspan="1" colspan="1" class="w_WeekDay_date" valign="top"><%= getDayOfWeek(addDays(currentDate, i)) %></td>
+        <% } %>
+        <td width="18px" rowspan="1" colspan="1" class="w_Hour_head" valign="top">時</td>
+      </tr>
+    </table>
+  </div>
+  <div class="table_margin">
+    <table border="0" cellpadding="5" cellspacing="1" width="911px" bgcolor="#6699cc">
+      <% for (let hour = 0; hour < 24; hour++) { %>
+        <tr>
+          <td width="18px" colspan="1" rowspan="1" class="w_Hour1" valign="top"><%= hour %></td>
+          <% for (let day = 0; day < 7; day++) { %>
+            <td width="108px" colspan="1" rowspan="1" class="w_WeekDay" valign="top">
+              <% 
+                const date = addDays(currentDate, day);
+                const item = items.find(item => item.pubDate.getHours() === hour && item.pubDate.getDate() === date.getDate());
+              %>
+              <% if (item) { %>
+                <div class="oa_time"><%= item.pubDate.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }) %></div>
+                <div class="oa_title"><%= item.title %></div>
+              <% } %>
+            </td>
+          <% } %>
+          <td width="18px" colspan="1" rowspan="1" class="w_Hour1" valign="top"><%= hour %></td>
+        </tr>
+      <% } %>
+    </table>
+  </div>
+</div>
+</body>
+</html>
