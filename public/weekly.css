@@ -1,0 +1,176 @@
+body
+{
+    font-size: 80%;
+    margin: 0px 0px 0px 0px;
+    line-height: 120%;
+    background-color: #ffffff;
+    font-family:'ＭＳ Ｐゴシック', Osaka, 'ヒラギノ角ゴ Pro W3';
+}
+hr
+{
+    border-right: 2px dotted;
+    border-top: 2px dotted;
+    border-left: 2px dotted;
+    color: #999999;
+    border-bottom: 2px dotted;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+a
+{
+    padding-left: 0px;
+    color: #0099ff;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    color: #0099ff;
+    text-decoration: underline;
+}
+
+table
+{
+　　padding-left: 0px;
+    font-size: 12px;
+    color: #444444;
+    text-decoration: none;
+}
+th
+{
+    padding-left: 0px;
+    font-size: 12px;
+    color: #444444;
+    text-decoration: none;
+}
+
+.w_Hour_head
+{
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #9999cc;
+	width:18px;
+}
+
+.w_Hour1
+{
+    color: #424242;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #99ccff;
+	width:18px;
+}
+.w_Hour2
+{
+    color: #424242;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #99ff99;
+	width:18px;
+}
+.w_Hour3
+{
+    color: #424242;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #ffcc00;
+	width:18px;
+}
+
+.oa_time
+{
+    font-weight: 900;
+    font-size: 12px;
+    color: #424242;
+}
+.oa_title
+{
+    font-weight: 900;
+    font-size: 12px;
+    color: #424242;
+    line-height: 110%;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.w_WeekDay_date
+{
+    color: ffffff;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #9999cc;
+	width:120px;
+}
+
+
+.w_WeekDay
+{
+    font-size: 10px;
+    letter-spacing: 1.0;
+    color: 424242;
+    background-color: #F3F3F3;
+    line-height: 12px;
+	width:120px;
+}
+
+.w_Sun_date
+{
+    color: #424242;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #ff9966;
+	width:120px;
+}
+
+.w_Sun
+{
+    font-size: 10px;
+    letter-spacing: 1.0;
+    color: #424242;
+    background-color: #FFF0E7;
+    line-height: 12px;
+	width:120px;
+}
+
+.w_Sat_date
+{
+    color: #424242;
+    font-weight: 900;
+    font-size: 12px;
+    text-align: center;
+    background-color: #99cccc;
+	width:120px;
+}
+
+.w_Sat
+{
+    font-size: 10px;
+    letter-spacing: 1.0;
+    color: #424242;
+    background-color: #E6F0E1;
+    line-height: 12px;
+	width:120px;
+}
+
+.space
+{
+    background-color: #FFFFFF;
+}
+
+td
+{
+    line-height: 110%;
+}
+
+.table_margin
+{
+    margin-top: 24px;
+}
